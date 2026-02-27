@@ -551,7 +551,6 @@ export default function SHLPV() {
       <section id="collection" style={{ padding: "96px clamp(16px,4vw,64px)" }}>
         <Reveal>
           <div style={{ marginBottom: 48 }}>
-            <p className="mono" style={{ fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#999", marginBottom: 10 }}>Season Drop</p>
             <h2 className="section-title">See Our New Collection</h2>
           </div>
         </Reveal>
@@ -569,7 +568,6 @@ export default function SHLPV() {
         <Reveal>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 48, flexWrap: "wrap", gap: 16 }}>
             <div>
-              <p className="mono" style={{ fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#999", marginBottom: 10 }}>Fan Favourites</p>
               <h2 className="section-title">Best Sellers</h2>
             </div>
             <div style={{ display: "flex", gap: 8 }}>
@@ -641,7 +639,6 @@ export default function SHLPV() {
       <section style={{ padding: "96px clamp(16px,4vw,64px)", background: "#F2EDE4" }}>
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
-            <p className="mono" style={{ fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#999", marginBottom: 12 }}>Our Promise</p>
             <h2 className="section-title">Why Choose Us?</h2>
           </div>
         </Reveal>
@@ -669,7 +666,6 @@ export default function SHLPV() {
       <section style={{ padding: "96px clamp(16px,4vw,64px)" }}>
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <p className="mono" style={{ fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#999", marginBottom: 12 }}>What They Say</p>
             <h2 className="section-title">Customer Reviews</h2>
           </div>
         </Reveal>
