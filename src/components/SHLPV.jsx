@@ -45,7 +45,7 @@ function useReveal(threshold = 0.12) {
     const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold });
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
-  }, []);
+  }, [threshold]);
   return [ref, visible];
 }
 
@@ -221,7 +221,6 @@ export default function SHLPV() {
   const [bestSlide, setBestSlide] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [searchVal, setSearchVal] = useState("");
-  const [wishlist, setWishlist] = useState([]);
   const [toast, setToast] = useState(null);
 
   useEffect(() => {
@@ -236,6 +235,11 @@ export default function SHLPV() {
     return () => clearInterval(t);
   }, []);
 
+  const showToast = (msg) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 2500);
+  };
+
   const addToCart = useCallback((item) => {
     setCart(prev => {
       const existing = prev.find(i => i.id === item.id);
@@ -249,15 +253,6 @@ export default function SHLPV() {
   const updateQty = (cartId, qty) => {
     if (qty < 1) { removeFromCart(cartId); return; }
     setCart(prev => prev.map(i => i.cartId === cartId ? { ...i, qty } : i));
-  };
-
-  const toggleWishlist = (id) => {
-    setWishlist(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
-  };
-
-  const showToast = (msg) => {
-    setToast(msg);
-    setTimeout(() => setToast(null), 2500);
   };
 
   const cartCount = cart.reduce((s, i) => s + i.qty, 0);
