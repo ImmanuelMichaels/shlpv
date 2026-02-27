@@ -235,10 +235,10 @@ export default function SHLPV() {
     return () => clearInterval(t);
   }, []);
 
-  const showToast = (msg) => {
+  const showToast = useCallback((msg) => {
     setToast(msg);
     setTimeout(() => setToast(null), 2500);
-  };
+  }, []);
 
   const addToCart = useCallback((item) => {
     setCart(prev => {
@@ -247,7 +247,7 @@ export default function SHLPV() {
       return [...prev, { ...item, qty: 1, cartId: Date.now() }];
     });
     showToast(`${item.name} added to cart`);
-  }, []);
+  }, [showToast]);
 
   const removeFromCart = (cartId) => setCart(prev => prev.filter(i => i.cartId !== cartId));
   const updateQty = (cartId, qty) => {

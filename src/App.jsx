@@ -1,10 +1,10 @@
 import './App.css'
-import Shlpv from './components/Shlpv';
+import SHLPV from './components/Shlpv';
 
 function App() {
   return (
     <>
-      <Shlpv />
+      <SHLPV />
     </>
 
   )
