@@ -1,12 +1,11 @@
 import './App.css'
-import SHLPV from './components/Shlpv';
+import SHLPV from './SHLPV.jsx';
 
 function App() {
   return (
     <>
       <SHLPV />
     </>
-
   )
 }
 
